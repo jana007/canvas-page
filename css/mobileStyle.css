@@ -1,0 +1,43 @@
+/*@media only screen and (max-width: 480px) {*/
+
+html, body {
+    padding: 3px;
+}
+ h1{
+    font-size: 3em;
+ }
+
+section {
+    /*width: 320px;*/
+    margin: 0 auto;
+    }
+
+#header {
+
+}
+
+#header img {
+    display: none;
+}
+
+/*}*/
+
+#navigation {
+            width:1.4em;
+            display: block;
+            background:#ddd;
+            font-size:1.35em;
+            text-align: center;
+        }
+        #nav.js {
+            display: none;
+        }
+        ul {
+            width:100%;
+            list-style:none;
+        }
+        li {
+            width:100%;
+            border-right:none;
+        }
+    }
