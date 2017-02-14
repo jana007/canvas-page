@@ -328,3 +328,42 @@ a {
     margin: 0;
     clear:both;
 }
+
+.searchresultdiv {
+    display: none;
+    margin-left: 40px;
+}
+
+.faqdetails {
+    display:none; 
+    margin: 0 10% 5% 10%;
+}
+
+.faqSubHeader {
+  margin-left: 5%;
+}
+.faqMainHeaderDiv {
+    display:none;
+}
+
+#live-search input {
+    font-size: 22px;
+}
+
+.searchresultheader, .faqHeader, .faqSubHeader {
+    cursor:pointer;
+}
+.clearFormField
+   {
+      /*background-image: url( http://png-5.findicons.com/files/icons/1150/tango/32/edit_clear.png );
+      background-position: center center;
+      background-repeat: no-repeat;  use this if you want to add an image in the future*/
+      height: 38px;
+      width: 38px;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      position: relative;
+      top: 2px;
+      left: -44px;
+   }
