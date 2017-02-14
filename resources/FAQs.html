@@ -12,6 +12,7 @@
   <script src="../js/jquery-3.1.1.min.js"></script>
   <script src="../js/countdown.min.js"></script>
   <script src="../js/script.js"></script>
+  <script src="../js/hideseek/demo/javascripts/vendor/modernizr.custom.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Bevan|Patua+One" rel="stylesheet">
 </head>
@@ -64,12 +65,8 @@
   resource to get acquainted with Canvas terminology before consulting the more specific
   resources below.</p>
 
-  <form id="live-search" action="" class="styled" method="post">
-    <fieldset>
-        <input type="text" class="text-input" id="filter" value="" />
-        <span id="filter-count"></span>
-    </fieldset>
-</form>
+  <input id="search" name="search" placeholder="Start typing here" type="text" data-list=".list">
+<div class="list">
 
   <h3>+ Assignments</h3><div style ="display: none;">
 
@@ -3052,7 +3049,7 @@
       Instructor Overview</a></li>
     </ul>
   </div>
-
+</div>
 
 <script type="text/javascript">
     $('h4').click(function(){
@@ -3062,32 +3059,9 @@
     $(this).next().slideToggle('slow');
 });
 </script>
-
-<script type="text/javascript">
-$(document).ready(function(){
-    $("#filter").keyup(function(){
- 
-        // Retrieve the input field text and reset the count to zero
-        var filter = $(this).val(), count = 0;
- 
-        // Loop through the comment list
-        $("h4").each(function(){
- 
-            // If the list item does not contain the text phrase fade it out
-            if ($(this).text().search(new RegExp(filter, "i")) < 0) {
-                $(this).fadeOut();
- 
-            // Show the list item if the phrase matches and increase the count by 1
-            } else {
-                $(this).show();
-                count++;
-            }
-        });
- 
-        // Update the count
-        var numberItems = count;
-        $("#filter-count").text("Number of Comments = "+count);
-    });
+<script>
+$(document).ready(function() {
+    $('#search').hideseek();
 });
 </script>
 
