@@ -3048,6 +3048,18 @@
 
 
 
+
+
+</section>
+</div> <!-- end squeeze -->
+    <section id = "footer">
+        <div class = "squeeze">
+            &copy; Office of Distance Learning, 296 Champions Way, Tallahassee, FL 32306
+        </div>
+    </section>
+</body>
+
+
 <script type="text/javascript">
     $('h4').click(function(){
     $(this).next('div').slideToggle('slow');
@@ -3059,11 +3071,8 @@
 
 
 <script type="text/javascript">
-$(document).ready(function(){
 
-
-
-    
+$(function(){
     $("#filter").keyup(function(){
 
         // Retrieve the input field text and reset the count to zero
@@ -3073,15 +3082,22 @@ $(document).ready(function(){
         var regEx  = new RegExp(filter, "i");
         var keywords = filter;
  
-        // Loop through the comment list
+        // Loop through each h4 tag with class faqSubHeader
+        // check each one against the search query
+        // if there's a match in the h4 or the div below it
+        // the html will be added to the output object
+        // if the search query is empty, results is empty
         $('.faqSubHeader').each(function(){
             if ( ( $(this).text().search(regEx) != -1
                 || $(this).next('div').text().search(regEx) != -1 )
                 && filter != ""
             ) {
-            // Show the list item if the phrase matches and increase the count by 1
+                // add the h4 to results (output)
                 output += '<h4 class = "searchresultheader">' + $(this).html() + '</h4> <div class = "searchresultdiv">';
-                output +=  $(this).next('div').html() + '</div>';
+                // add the next div to output
+                // this data is displayed when the user clicks // on the h4 element
+                output +=  $(this).next('.faqdetails').html() + '</div>';
+                // increase count
                 count++;
 
             }
@@ -3091,18 +3107,28 @@ $(document).ready(function(){
         output += '</div>';
         $('.searchresults').html(output);
 
-        // add highlighting to matched articles
-        if (count > 0 && filter.length > 4) {
-
+        // add highlighting to matched FAQ
+        if (count > 0 && filter.length > 2) {
+            
+            // the source string is only in class "searchResults"
             var src_str = $(".searchresults").html();
+            // term is equal to the filter/search text used
             var term = filter;
-            term = term.replace(/(\s+)/,"(<[^>]+>)*$1(<[^>]+>)*");
-            var pattern = new RegExp("("+term+")", "gi");
+            var except = new RegExp("div|ass|cla|clas|class|las|lass|hdiv", "g");
+            var exceptTwo = new RegExp("(div[A-z]|[A-z]div)|(class[A-z]|[A-z]class)", "g");
+            if (!except.test(filter) || exceptTwo.test(filter) ) {
+                // replace white space with reg ex
+                term = term.replace(/(\s+)/,"(<[^div][^class][^>]+>)*$1(<[^>]+>)*");
+                console.log(term);
+                var pattern = new RegExp("("+term+")", "gi");
+                console.log("hello");
+            
+            
+                src_str = src_str.replace(pattern, "<mark>$1</mark>");
+                src_str = src_str.replace(/(<mark>[^<>]*)((<[^>]+>)+)([^<>]*<\/mark>)/,"$1</mark>$2<mark>$4");
 
-            src_str = src_str.replace(pattern, "<mark>$1</mark>");
-            src_str = src_str.replace(/(<mark>[^<>]*)((<[^>]+>)+)([^<>]*<\/mark>)/,"$1</mark>$2<mark>$4");
-
-            $(".searchresults").html(src_str);
+                $(".searchresults").html(src_str);
+            }
         }
         
         
@@ -3122,16 +3148,6 @@ $(document).ready(function(){
     $('.clearFormField').click(function() {
         $('.searchresults').html('<p></p>');
         $("#filter-count").text('');
+        $("#filter").focus();
     });
 </script>
-
-
-
-</section>
-</div> <!-- end squeeze -->
-    <section id = "footer">
-        <div class = "squeeze">
-            &copy; Office of Distance Learning, 296 Champions Way, Tallahassee, FL 32306
-        </div>
-    </section>
-</body>

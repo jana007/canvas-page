@@ -69,6 +69,40 @@ $(document).ready(function(){
 });
 </script>
 
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#filter").keyup(function(){
+    console.log("keyup");
+        // Retrieve the input field text and reset the count to zero
+        var filter = $(this).val()
+        var count  = 0;
+        var output = '<ul class = "searchresults">';
+        var regEx  = new RegExp(filter, "i");
+        var ran = 0;
+ 
+        // Loop through the comment list
+        $(".list > h4").children().each(function(){
+            if ($(this).text().search(regEx) != -1) {
+            // Show the list item if the phrase matches and increase the count by 1
+                output += '<li>' + $(this).html() + $(this).next().html() + '</li>';
+                console.log($(this).text() + " list item ");
+                console.log(output + " ouput ");
+                count++;
+            }
+            ran++;
+            console.log(ran);
+        });
+        output += '</ul>';
+        console.log($('.searchresults').html() + " before");
+        $('.searchresults').replaceWith(output);
+        console.log($('.searchresults').html() + " after");
+ 
+        // Update the count
+        $("#filter-count").text("Number of Comments = "+count);
+    });
+});
+</script>
+
 
 
 
