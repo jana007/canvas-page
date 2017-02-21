@@ -4,21 +4,21 @@
 <meta></meta>
 <title>FSU Canvas Support Center | Screenshot comparison</title>
 <head>
-  <link href = "./css/style.css"  type = "text/css" rel = "stylesheet"/>
-  <link href = "./css/style2.css" type = "text/css" rel = "stylesheet"/>
+  <link href = "/cpage/css/style.css"  type = "text/css" rel = "stylesheet"/>
+  <link href = "/cpage/css/style2.css" type = "text/css" rel = "stylesheet"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <!--link href = "css/mobileStyle.css" type = "text/css" media = "handheld" rel = "stylesheet"/>
-  <link href = "css/mobileStyle.css" type = "text/css" rel = "stylesheet"/-->
-  <script src="./js/jquery-3.1.1.min.js"></script>
-  <script src="./js/countdown.min.js"></script>
-  <script src="./js/script.js"></script>
+  <script src="/cpage/js/jquery-3.1.1.min.js"></script>
+  <script src="/cpage/js/countdown.min.js"></script>
+  <script src="/cpage/js/script.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Bevan|Patua+One" rel="stylesheet">
+  <link rel="stylesheet" href="/cpage/node_modules/jquery-modal/jquery.modal.css" type="text/css" media="screen" />
+  <script src="/cpage/node_modules/jquery-modal/jquery.modal.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <section id = "navigation-and-banner">
     <div id = "header">
-        <img src = "./img/fsu-seal.png" alt = "FSU torches seal">
+        <img src = "/cpage/img/fsu-seal.png" alt = "FSU torches seal">
         <h1>FSU Canvas Support Center</h1>
     </div>
     <nav id = "navigation">
@@ -28,24 +28,24 @@
         <ul id = "nav">
             <li class = "active"><a href= "index.html">get ready</a>
                 <ul>
-                    <li><a href = "./get-ready/improvements.html">Improvements</a></li>
-                    <li><a href = "./get-ready/screenshot-comparison.html">Screenshot Comparison</a></li>
+                    <li><a href = "/cpage/get-ready/improvements.html">Improvements</a></li>
+                    <li><a href = "/cpage/get-ready/screenshot-comparison.html">Screenshot Comparison</a></li>
                 </ul>
             </li>
-            <li><a href = "./updates">updates</a></li>
-            <li><a href = "./timeline">timeline</a></li>
-            <li><a href = "./resources">resources</a>
+            <li><a href = "/cpage/updates">updates</a></li>
+            <li><a href = "/cpage/timeline">timeline</a></li>
+            <li><a href = "/cpage/resources">resources</a>
                 <ul>
-                    <li><a href = "./resources/FAQs.html">FAQs</a></li>
-                    <li><a href = "./resources/guides.html">Guides</a></li>
+                    <li><a href = "/cpage/resources/FAQs.html">FAQs</a></li>
+                    <li><a href = "/cpage/resources/guides.html">Guides</a></li>
                 </ul>
             <li>
-            <li><a href = "./training">training</a></li>
-            <li><a href = "./support">support</a></li>
+            <li><a href = "/cpage/training">training</a></li>
+            <li><a href = "/cpage/support">support</a></li>
         </ul>
     </nav>
     <div class = "breadcrumb">
-        <a href = "./index.html">Home</a> /<a href = "./get-ready"> Get Ready </a>
+        <a href = "/cpage/index.html">Home</a> /<a href = "/cpage/get-ready"> Get Ready </a>
     </div>
 </section>
 <div class = "squeeze">
@@ -61,42 +61,46 @@
 <h2>Home Page</h2>
 
 <h3>Before:</h3>
-<img src = "./img/screens/home-before.png">
+<div id="home-before-modal" class = "modal" style = "display:none"><a href = "#" rel="modal:close">
+<img src = "/cpage/img/screens/home-before.png">
+</a></div>
+<a href = "#home-before-modal" rel="modal:open">
+<img class = "modal-open" style = "max-width: 60%" src = "/cpage/img/screens/home-before.png"></a>
 
 <h3>After:</h3>
-<img src = "./img/screens/home-after.png">
+<div id="home-after-modal" class = "modal" style = "display:none"><a href = "#" rel="modal:close"><img src = "/cpage/img/screens/home-after.png"></a></div><a href = "#home-after-modal" rel="modal:open"><img class = "modal-open" style = "max-width: 60%" src = "/cpage/img/screens/home-after.png"></a>
 
 <h2>Notifications Panel</h2>
 
 <h3>Before:</h3>
-<img src = "./img/screens/notification-before.png">
+<div id="notification-before-modal" class = "modal" style = "display:none"><a href = "#" rel="modal:close"><img src = "/cpage/img/screens/notification-before.png"></a></div><a href = "#notification-before-modal" rel="modal:open"><img class = "modal-open" style = "max-width: 60%" src = "/cpage/img/screens/notification-before.png"></a>
 
 <h3>After:</h3>
-<img src = "./img/screens/notification-after.png">
+<div id="notification-after-modal" class = "modal" style = "display:none"><a href = "#" rel="modal:close"><img src = "/cpage/img/screens/notification-after.png"></a></div><a href = "#notification-after-modal" rel="modal:open"><img class = "modal-open" style = "max-width: 60%" src = "/cpage/img/screens/notification-after.png"></a>
 
 <h2>Course Announcements Page</h2>
 
 <h3>Before:</h3>
-<img src = "./img/screens/announcements-before.png">
+<div id="announcements-before-modal" class = "modal" style = "display:none"><a href = "#" rel="modal:close"><img src = "/cpage/img/screens/announcements-before.png"></a></div><a href = "#announcements-before-modal" rel="modal:open"><img class = "modal-open" style = "max-width: 60%" src = "/cpage/img/screens/announcements-before.png"></a>
 
 <h3>After:</h3>
-<img src = "./img/screens/announcements-after.png">
+<div id="announcements-after-modal" class = "modal" style = "display:none"><a href = "#" rel="modal:close"><img src = "/cpage/img/screens/announcements-after.png"></a></div><a href = "#announcements-after-modal" rel="modal:open"><img class = "modal-open" style = "max-width: 60%" src = "/cpage/img/screens/announcements-after.png"></a>
 
 <h2>Assignment Submission Page</h2>
 
 <h3>Before:</h3>
-<img src = "./img/screens/assignment-before.png">
+<div id="assignment-before-modal" class = "modal" style = "display:none"><a href = "#" rel="modal:close"><img src = "/cpage/img/screens/assignment-before.png"></a></div><a href = "#assignment-before-modal" rel="modal:open"><img class = "modal-open" style = "max-width: 60%" src = "/cpage/img/screens/assignment-before.png"></a>
 
 <h3>After:</h3>
-<img src = "./img/screens/assignment-after.png">
+<div id="assignment-after-modal" class = "modal" style = "display:none"><a href = "#" rel="modal:close"><img src = "/cpage/img/screens/assignment-after.png"></a></div><a href = "#assignment-after-modal" rel="modal:open"><img class = "modal-open" style = "max-width: 60%" src = "/cpage/img/screens/assignment-after.png"></a>
 
 <h2>Course Discussion Board</h2>
 
 <h3>Before:</h3>
-<img src = "./img/screens/discussion-before.png">
+<div id="discussion-before-modal" class = "modal" style = "display:none"><a href = "#" rel="modal:close"><img src = "/cpage/img/screens/discussion-before.png"></a></div><a href = "#discussion-before-modal" rel="modal:open"><img class = "modal-open" style = "max-width: 60%" src = "/cpage/img/screens/discussion-before.png"></a>
 
 <h3>After:</h3>
-<img src = "./img/screens/discussion-after.png">
+<div id="discussion-after-modal" class = "modal" style = "display:none"><a href = "#" rel="modal:close"><img src = "/cpage/img/screens/discussion-after.png"></a></div><a href = "#discussion-after-modal" rel="modal:open"><img class = "modal-open" style = "max-width: 60%" src = "/cpage/img/screens/discussion-after.png"></a>
 
 
 </section>
@@ -106,4 +110,5 @@
             &copy; Office of Distance Learning, 296 Champions Way, Tallahassee, FL 32306
         </div>
     </section>
+
 </body>

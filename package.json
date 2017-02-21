@@ -1,0 +1,19 @@
+{
+  "name": "canvas-page",
+  "version": "1.0.1",
+  "description": "The ODL website for transitioning to Canvas",
+  "main": "js/script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jana007/canvas-page.git"
+  },
+  "author": "Jana McKinnon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jana007/canvas-page/issues"
+  },
+  "homepage": "https://github.com/jana007/canvas-page#readme"
+}
