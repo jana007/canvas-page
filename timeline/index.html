@@ -27,6 +27,7 @@
         <ul id = "nav">
             <li class = "active"><a href= "/cpage/get-ready/"> get ready</a>
                 <ul>
+                    <li><a href = "/cpage/">Home</a></li>
                     <li><a href = "/cpage/get-ready/improvements.html"> Improvements</a></li>
                     <li><a href = "/cpage/get-ready/screenshot-comparison.html"> Screenshot Comparison</a></li>
                 </ul>
@@ -49,10 +50,108 @@
     </section>
     <div class = "squeeze">
     
+    <h1>Timeline</h1>
+    <p><em>This projected timeline will most likely require changes as capabilities and needs are reassessed. Objectives are listed in their general sequence.</em></p>
+    
+    <div class = "timeline odd">
+        <h2>Spring 2017</h2>
+        <ul>
+            <li>Develop custom apps and processes (e.g., automatic enrollments, cohorting, Grade Transfer Tool, Course/Development Site Request Tool)</li>
+            <li>Set up third-party app integrations (e.g., Turnitin, Kaltura, Bb Collaborate)</li>
+            <li><strong>Release Canvas "Sandbox" environment to faculty and staff</strong> <a href = "https://fsu.qualtrics.com/SE/?SID=SV_2aVuNASAi4kvTmd">(sign up now!)</a></li>
+            <li>Prepare instructor training sessions; prepare end-user resources</li>
+            <li>Prepare early adopters for Canvas Pilot</li>
+        </ul>
+    </div>
+    <div class = "timeline even">
+        <h2>Summer 2017</h2>
+        <ul>
+            <li><strong>Organize large Canvas demo event</strong></li>
+            <li>Run Canvas Pilot for select courses and instructors</li>
+            <li><strong>Provide training opportunities and one-on-one consultations with Instructional Development staff and Technical Support staff</strong></li>
+            <li>Finalize configurations, custom apps, processes and integrations</li>
+
+        </ul>
+    </div>
+    <div class = "timeline odd">
+        <h2>Fall 2017</h2>
+        <ul>
+            <li><strong>Release official Canvas environment to all faculty, staff, and students for optional use in Fall (open beta) and for development of Spring 2018 courses</strong></li>
+            <li>Continue providing training opportunities and one-on-one consultations</li>
+            <li><strong>Organize one or two large Canvas training events</strong></li>
+
+        </ul>
+    </div>
+    <div class = "timeline even">
+        <h2>Spring 2018</h2>
+        <ul>
+            <li><strong>All active courses are now taught in Canvas</strong> (except College of Medicine’s yearlong courses)</li>
+        </ul>
+        
+    </div>
+    <div class = "timeline odd">
+        <h2>Summer 2018</h2>
+        <ul>
+            <li><strong>FSU Blackboard system closes on July 1, 2018</storng></li>
+            <li>College of Medicine transitions to Canvas</li>
+        </ul>
+    </div>
+
+<section id="canvas-timeline" class="cd-container">
+        <div class="canvas-timeline-block">
+            <div class="canvas-timeline-img cd-picture">
+                <img src="/cpage/img/gcircle.png" alt="Picture">
+            </div> <!-- canvas-timeline-img -->
+
+            <div class="canvas-timeline-content">
+                <h2>Title of section 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+                <a href="#0" class="cd-read-more">Read more</a>
+                <span class="cd-date">Jan 14</span>
+            </div> <!-- canvas-timeline-content -->
+        </div> <!-- canvas-timeline-block -->
+
+        <div class="canvas-timeline-block">
+            <div class="canvas-timeline-img cd-movie">
+                <img src="/cpage/img/gcircle.png" alt="Movie">
+            </div> <!-- canvas-timeline-img -->
+
+            <div class="canvas-timeline-content">
+                <h2>Title of section 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
+                <a href="#0" class="cd-read-more">Read more</a>
+                <span class="cd-date">Jan 18</span>
+            </div> <!-- canvas-timeline-content -->
+        </div> <!-- canvas-timeline-block -->
+
+        <div class="canvas-timeline-block">
+            <div class="canvas-timeline-img cd-picture">
+                <img src="/cpage/img/gcircle.png" alt="Picture">
+            </div> <!-- canvas-timeline-img -->
+
+            <div class="canvas-timeline-content">
+                <h2>Title of section 3</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>
+                <a href="#0" class="cd-read-more">Read more</a>
+                <span class="cd-date">Jan 24</span>
+            </div> <!-- canvas-timeline-content -->
+        </div> <!-- canvas-timeline-block -->
+    </section>
     
     
     
-</div> <!-- end squeeze -->
+<script type="text/javascript">
+$(window).on('scroll', function(){
+    $timeline_block.each(function(){
+        if( $(this).offset().top <= $(window).scrollTop()+$(window).height()*0.75 && $(this).find('.canvas-timeline-img').hasClass('is-hidden') ) {
+            $(this).find('.canvas-timeline-img, .canvas-timeline-content').removeClass('is-hidden').addClass('bounce-in');
+        }
+    });
+});
+</script>
+    
+    
+    </div> <!-- end squeeze -->
     <section id = "footer">
         <div class = "squeeze">
             &copy; Office of Distance Learning, 296 Champions Way, Tallahassee, FL 32306
