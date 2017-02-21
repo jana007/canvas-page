@@ -134,7 +134,24 @@ a {
 #navigation ul ul {
     position: absolute;
     display: none;
+    background-color: #4C1E2C;
+    padding: 0;
+    margin: 0;
+    min-width: 250px;
+    padding-bottom: 20px;
 }
+#navigation ul ul li {
+    float:none;
+
+}
+#navigation ul ul li a {
+    width: 250px;
+    display: block;
+}
+#navigation ul ul li a:hover {
+    border-bottom: 2px solid #f4ede2;
+}
+
 .breadcrumb {
     font-weight: bold;
     color: #782f40;
