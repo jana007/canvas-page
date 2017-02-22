@@ -19,9 +19,14 @@
 
 }
 @media screen and (max-width: 840px) {
+
+    .breadcrumb {
+        margin-top: 10px;
+    }
     
     #countdown .countdown-text {
         height: auto;
+        
     }
     #countdown .countdown-text h1 {
         width: 80%;
@@ -43,27 +48,24 @@
 
     #navigation ul, #navigation:active ul { 
 
-        display: none;
+  
         position: absolute;
         padding: 20px;
         background: #fff;
         /*border: 2px solid #444;*/
         right: 20px;
         top: 0px;
-        width: 150px;
+        /*width: 150px;*/
         border-radius: 4px 0 4px 4px;
         float:right;
-
-    }
-    #navigation ul ul {
-        position: absolute;
-        display: none;
+        font-size: 1.5em;
     }
 
-    #navigation li: hover ul {
-        display: block;
-    }
 
+
+    #navigation li:hover {
+        background-color: #fff;
+    }
     #navigation li, #navigation li a {
         color: #782f40;
         text-align: center;
@@ -72,16 +74,28 @@
 
     }
     #navigation li a {
-        border-bottom: 1px solid #888;
+       /* border-bottom: 1px solid #888;*/
     }
+ #navigation ul li {
+    height: auto;
+ }
+#navigation ul ul {
+    background-color: #fff;
+    font-size: 0.5em;
+    color: #000;
+    display:block;
 
-
+}
     #navigation:hover ul {
 
         display: block;
 
     }
-
+    
+    #navigation li:hover a {
+        background: #fff;
+    }
+    
     #navigation a:hover, #navigation li:hover {
         color: #f4ede2;
         border: 0;
@@ -103,6 +117,15 @@
         -webkit-font-smoothing: antialiased;
         text-rendering: optimizeLegibility;
     }
+    h1 {
+        font-size: 2em;
+        margin: 0 0 20px 0;
+    }
+    
+    img {
+        max-width: 100%;
+    }
+    
     #navigation {
         width: 30px;
         height:30px;
@@ -121,14 +144,14 @@
         display: none;
     }
     #header h1 {
-        font-size:0.8em;
+        font-size:1em;
     }
     section {
 
         height: auto;
         width: 100%;
         margin: 0 auto;
-	padding-bottom: 30px;
+        padding-bottom: 30px;
     }
     #header span {
         display: block;
@@ -172,7 +195,7 @@
     }
 
     .left, .right {
-        width: 80%;
+        width: 100%;
         clear: both;
         margin: 0 auto;
         padding: 0;
@@ -180,7 +203,7 @@
     }
     .squeeze {
         margin: 0 auto;
-        width: 90%;
+        width: 100%;
         height: auto;
     }
     .button {
@@ -193,11 +216,12 @@
     }
     .button img {
         margin: 0;
-        width: 100%;
+        width: 80%;
     }
     .left, .right {
         clear: both;
         float:none;
+        width: 90%;
     }
     #recent-news {
         width: 100%;
@@ -242,6 +266,9 @@
         display: block;
         float:none;
     }
+    .searchresultdiv {
+        margin: 0;
+    }
 }
 @media only screen and (max-width: 1000px) {
 #countdown {
@@ -249,13 +276,13 @@
     height: auto;
 }
 #countdown .countdown-text {
-    
+    padding: 10px;
     text-align: center;
     height: auto;
 }
 #countdown .countdown-text h1 {
     width: 75%;
-    font-size: 1.0em;
+    font-size: 2.0em;
 }
 #countdown .countdown-text img {
     width: 35px;
