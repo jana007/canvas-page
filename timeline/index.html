@@ -9,8 +9,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <script src="/cpage/js/jquery-3.1.1.min.js"></script>
   <script src="/cpage/js/countdown.min.js"></script>
-  <script src="/cpage/js/script.js"></script>
-  
   <link href="/cpage/css/timeline.css" type="text/css" rel="stylesheet"/>
   
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -133,45 +131,5 @@
             &copy; Office of Distance Learning, 296 Champions Way, Tallahassee, FL 32306
         </div>
     </section>
-    
-    
-    
-<script type="text/javascript">    
-    
-(function() {
-
-  'use strict';
-
-  // define variables
-  var items = document.querySelectorAll(".timeline li");
-
-  // check if an element is in viewport
-  // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
-  function isElementInViewport(el) {
-    var rect = el.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  }
-
-  function callbackFunc() {
-    for (var i = 0; i < items.length; i++) {
-      if (isElementInViewport(items[i])) {
-        items[i].classList.add("in-view");
-      }
-    }
-  }
-
-  // listen for events
-  window.addEventListener("load", callbackFunc);
-  window.addEventListener("resize", callbackFunc);
-  window.addEventListener("scroll", callbackFunc);
-
-})();
-</script>
-    
-    
+  <script src="/cpage/js/script.js"></script>
 </body>

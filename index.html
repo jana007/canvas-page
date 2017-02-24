@@ -10,6 +10,8 @@
   <script src="/cpage/js/jquery-3.1.1.min.js"></script>
   <script src="/cpage/js/countdown.min.js"></script>
   <script src="/cpage/js/script.js"></script>
+  <link rel="stylesheet" href="/cpage/node_modules/jquery-modal/jquery.modal.css" type=
+  "text/css" media="screen" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Bevan|Patua+One" rel="stylesheet">
 </head>
@@ -56,7 +58,12 @@
         <div class = "squeeze">
             <div class = "left video">
                 <h3>The Canvas Support Team!</h3>
-                <img src = "/cpage/img/canvas-support-team.jpg">
+                <div id="support-team-modal" class="modal" style="display:none">
+                <a href="#" rel="modal:close"><img src=
+                "/cpage/img/canvas-support-team.jpg" /></a>
+                </div><a href="#support-team-modal" rel="modal:open"><img class="modal-open"
+                src="/cpage/img/canvas-support-team.jpg" /></a>
+                
 
             </div>
             <div class = "right text">
@@ -176,7 +183,8 @@
         </div>
     </section>
 </body>
-
+<script src="/cpage/node_modules/jquery-modal/jquery.modal.js" type=
+"text/javascript" charset="utf-8"></script>
 <script type = "text/javascript">
 $(".mobile-view-all").click(function (event){
     event.preventDefault();
